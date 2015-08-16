@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>ScoreTrac</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Choose a Class</h1>
+	</div>
+<!-- add links  -->
+	<ul data-role="listview">
+	  <li><a href="#inputPage">Class1</a></li>
+	  <li><a href="">Class2</a></li>
+	  <li><a href="">Class3</a></li>
+	</ul>
+</div>
+
+<div data-role="page" id = "inputPage">
+	<p> this is a new page </p>
+</div>
+
+<div data-role="page" id = "inputPage">
+	<input type="text" name="name" id="basic" value="" placeholder="Paste HTML for progress report"  />
+<!-- this is where the assignments go  -->
+	<p> Add New Assignment </p>
+	<input type="text" name="name" id="basic" value="" placeholder="Points Scored"  />
+	<input type="text" name="name" id="basic" value="" placeholder="Total Points"  />
+	<input type="submit" value="Submit" id = "submit"/> 
+
+</div>
+
+
+</body>
+</html>
