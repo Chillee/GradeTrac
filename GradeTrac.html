@@ -1,14 +1,21 @@
 <head>
-  <title>Todo List</title>
+  <title>GradeTracker</title>
 </head>
  
 <body>
   <div class="container">
     <header>
-      <h1>Todo List</h1>
-      <form class="new-task">
-        <input type="text" name="text" placeholder="enter html" />
-      </form>
+      <h1>Calculate your grade!</h1>
+      <p> On your Schoolloop portal, click the "Progress Report" button for the class that you want to check your grade for. Right click and Inspect Element to copy and paste the HTML code from that page. </p>
     </header>
+ 
+      <form class="new-task">
+        <input type="text" name="text" placeholder="Paste progress report HTML code here" />
+        <br><br>
+        <div id="submit">
+        <input type="submit" value="Submit">
+        </div>
+
+      </form>
   </div>
 </body>
