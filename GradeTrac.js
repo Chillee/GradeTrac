@@ -19,20 +19,30 @@ if (Meteor.isClient) {
       var htmlCode = "<div>" + htmlCode + "</div>";
 
       var gradeBook = {}
-      gradeBook["ajax_accordion"] = $(htmlCode).find(".nav_employee").text();
-      alert($(htmlCode).find(".nav_employee").text());
+      
+
+      var grade_accordion = $(htmlCode).find(".hub_general");
+
+      //alert(grade_accordion.text());
+
+      var assignment = $(grade_accordion).find(".float_l.padding_t5");
+
+      console.log($(".float_l.padding_t5"));
+      //$(".float_l.padding_t5").each(function() {
+        //console.log($(this).text());
+      //});
       //var place = htmlCode.search('<title>');
       //var startPlace = place + 7;
       //var endPlace = htmlCode.search("'s Portal");
 
       //var name = htmlCode.substring(startPlace, endPlace);
 
-
+      //console.log(assignment.html());
       //var jsonString = '{"gradebook":['+ '{"studentName":"' + name +'"}';
-      console.log(gradeBook);
+      //console.log(assignment);
 
       //console.log(name);
-      // Clear form
+      // Clear form 
       event.target.text.value = "";
     }
   });
