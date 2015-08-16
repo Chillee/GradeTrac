@@ -1,23 +1,39 @@
+Tasks = new Mongo.Collection("tasks");
+
+console.log("hi");
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
-
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
+  // This code only runs on the client
+  Template.body.helpers({
+    tasks: function () {
+      return Tasks.find({});
     }
   });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
-}
+  Template.body.events({
+    "submit .new-task": function (event) {
+      // Prevent default browser form submit
+      event.preventDefault();
+ 
+      // Get value from form element
+      var htmlCode = event.target.text.value;
+      var htmlCode = "<div>" + htmlCode + "</div>";
 
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
+      var gradeBook = {}
+      gradeBook["ajax_accordion"] = $(htmlCode).find(".nav_employee").text();
+      alert($(htmlCode).find(".nav_employee").text());
+      //var place = htmlCode.search('<title>');
+      //var startPlace = place + 7;
+      //var endPlace = htmlCode.search("'s Portal");
+
+      //var name = htmlCode.substring(startPlace, endPlace);
+
+
+      //var jsonString = '{"gradebook":['+ '{"studentName":"' + name +'"}';
+      console.log(gradeBook);
+
+      //console.log(name);
+      // Clear form
+      event.target.text.value = "";
+    }
   });
 }
